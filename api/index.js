@@ -7,6 +7,7 @@ const env = require("dotenv");
 const authRoute = require("./routes/auth");
 const userRouter = require("./routes/users");
 const movieRouter = require("./routes/movies");
+const listRouter = require("./routes/lists");
 
 const app = express();
 
@@ -24,6 +25,7 @@ mongoose
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRouter);
 app.use("/api/movies", movieRouter);
+app.use("/api/lists", listRouter);
 
 app.listen(process.env.PORT, () =>
   console.log(`Backend server is running ${process.env.PORT}`)
