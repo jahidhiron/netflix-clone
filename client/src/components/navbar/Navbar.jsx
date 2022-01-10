@@ -10,9 +10,10 @@ const Navbar = () => {
   useEffect(() => {
     window.onscroll = () => {
       setIsScrolled(window.pageYOffset === 0 ? false : true);
-
-      return () => (window.onscroll = null);
     };
+
+    // clean up
+    return () => (window.onscroll = null);
   }, [isScrolled]);
 
   return (

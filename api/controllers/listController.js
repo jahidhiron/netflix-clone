@@ -58,7 +58,6 @@ const getList = async (req, res, next) => {
         ]);
       }
     } else {
-      console.log("ok");
       list = await List.aggregate([{ $sample: { size: 5 } }]);
     }
     res.status(201).json(list);

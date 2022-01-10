@@ -1,7 +1,30 @@
+import axios from "axios";
 import "./featured.scss";
 import { PlayArrow, InfoOutlined } from "@material-ui/icons";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Featured = ({ type }) => {
+  const [content, setContent] = useState([]);
+
+  useEffect(() => {
+    const getRandomContent = async () => {
+      try {
+        await axios(`movies/random?type=${type}`, {
+          headers: {
+            token:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZGE5ZTRkYzQzYzc4MmUzZDk3N2VjYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MTczNTQ4MSwiZXhwIjoxNjQxODIxODgxfQ.JdwEMgPMA-qcQFS1ZYWP1EFwn0tfnbdBKYULbYHXH4E",
+          },
+        }).then((res) => {
+          const randomData = res.data[0];
+          setContent(randomData);
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getRandomContent();
+  }, []);
   return (
     <div className="featured">
       {type && (
@@ -26,23 +49,11 @@ const Featured = ({ type }) => {
           </select>
         </div>
       )}
-      <img
-        src="https://i.pinimg.com/originals/10/41/5d/10415d2d0accbbd6ae2ce6018fea86b9.jpg"
-        alt=""
-      />
+      <img src={content.img} alt="" />
 
       <div className="info">
-        <img
-          width="100%"
-          src="https://images.thedirect.com/media/article_full/shang-chi-songs.jpg"
-          alt="featured"
-        />
-        <span className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error
-          tenetur non, culpa magni sed vitae quam ratione veritatis natus sint
-          minus doloribus id illo suscipit exercitationem omnis officia.
-          Officia.
-        </span>
+        <img width="100%" src={content.imgSm} alt="featured" />
+        <span className="desc">{content.desc}</span>
         <div className="buttons">
           <button className="play">
             <PlayArrow />
