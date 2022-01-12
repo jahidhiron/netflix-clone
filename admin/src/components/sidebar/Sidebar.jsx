@@ -22,14 +22,14 @@ const Sidebar = () => {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              {/* <Link to="/"> */}
-              <div className="sidebarIcon">
-                <LineStyle />
-              </div>
-              Home
-              {/* </Link> */}
-            </li>
+            <Link to="/" className="link">
+              <li className="sidebarListItem active">
+                <div className="sidebarIcon">
+                  <LineStyle />
+                </div>
+                Home
+              </li>
+            </Link>
 
             <li className="sidebarListItem">
               <div className="sidebarIcon">
@@ -50,16 +50,19 @@ const Sidebar = () => {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              {/* <Link to="/users"> */}
-              <PermIdentity className="sidebarIcon" />
-              Users
-              {/* </Link> */}
-            </li>
-            <li className="sidebarListItem">
-              <Storefront className="sidebarIcon" />
-              Products
-            </li>
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <PermIdentity className="sidebarIcon" />
+                Users
+              </li>
+            </Link>
+
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <Storefront className="sidebarIcon" />
+                Products
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions
