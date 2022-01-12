@@ -78,7 +78,7 @@ export const userRows = [
     id: 2,
     username: "Jon Snow",
     avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "https://thumbs.dreamstime.com/b/girl-face-avatar-profile-picture-wearing-glasses-bandana-smiling-cartoon-character-portrait-vector-illustration-graphic-design-149753695.jpg",
     email: "jon@gmail.com",
     status: "active",
     transaction: "$120.00",
@@ -87,7 +87,7 @@ export const userRows = [
     id: 3,
     username: "Jon Snow",
     avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "https://avatoon.me/wp-content/uploads/2020/07/Cartoon-Pic-Ideas-for-DP-Profile-09.png",
     email: "jon@gmail.com",
     status: "active",
     transaction: "$120.00",
@@ -95,8 +95,7 @@ export const userRows = [
   {
     id: 4,
     username: "Jon Snow",
-    avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    avatar: "https://gocartoonme.com/wp-content/uploads/cartoon-avatar.png",
     email: "jon@gmail.com",
     status: "active",
     transaction: "$120.00",
@@ -105,7 +104,7 @@ export const userRows = [
     id: 5,
     username: "Jon Snow",
     avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "https://www.drupal.org/files/user-pictures/picture-2204516-1469808304.png",
     email: "jon@gmail.com",
     status: "active",
     transaction: "$120.00",
@@ -123,7 +122,7 @@ export const userRows = [
     id: 7,
     username: "Jon Snow",
     avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "https://www.pngitem.com/pimgs/m/528-5286598_all-photo-png-clipart-male-teacher-clipart-png.png",
     email: "jon@gmail.com",
     status: "active",
     transaction: "$120.00",
@@ -141,7 +140,7 @@ export const userRows = [
     id: 9,
     username: "Jon Snow",
     avatar:
-      "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "https://www.pngitem.com/pimgs/m/528-5286598_all-photo-png-clipart-male-teacher-clipart-png.png",
     email: "jon@gmail.com",
     status: "active",
     transaction: "$120.00",
