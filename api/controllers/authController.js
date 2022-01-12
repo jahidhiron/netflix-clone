@@ -64,6 +64,7 @@ const login = async (req, res, next) => {
     const { password, ...info } = user._doc;
     res.status(200).json({ ...info, accessToken });
   } catch (err) {
+    console.log(err);
     res.status(500).json({
       message: "Internal server error !",
     });

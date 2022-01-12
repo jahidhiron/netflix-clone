@@ -11,6 +11,7 @@ const movieRouter = require("./routes/movies");
 const listRouter = require("./routes/lists");
 
 const app = express();
+const allowedOrigins = ["http://localhost:3000", "http://localhost:4000"];
 
 // configuration
 env.config();
@@ -25,7 +26,7 @@ mongoose
 // cors origin
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: allowedOrigins,
   })
 );
 

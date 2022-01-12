@@ -70,7 +70,7 @@ const getUsers = async (req, res, next) => {
   if (req.user.isAdmin) {
     try {
       const users = query
-        ? await User.find().sort({ _id: -1 }).limit(10)
+        ? await User.find().sort({ _id: -1 }).limit(5)
         : await User.find();
       res.status(201).json(users);
     } catch (err) {
@@ -86,21 +86,6 @@ const getUsers = async (req, res, next) => {
 const getUserStats = async (req, res, next) => {
   const today = new Date();
   const lastYear = today.setFullYear(today.setFullYear() - 1);
-
-  const monthsAttay = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
 
   try {
     const userPerMonth = await User.aggregate([
